@@ -12,7 +12,7 @@ export class CdkcicdStack extends cdk.Stack {
        synth: new ShellStep('Synth', {
         // Use a connection created using the AWS console to authenticate to GitHub
         // Other sources are available.
-        input: CodePipelineSource.gitHub('singasanisuryateja/cdkcicd', 'main'),
+        input: CodePipelineSource.gitHub('singasanisuryateja/cdkcicd', 'master'),
         commands: [
           'npm ci',
           'npm run build',
