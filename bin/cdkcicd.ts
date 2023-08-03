@@ -7,3 +7,5 @@ const app = new cdk.App();
 new CdkcicdStack(app, 'CdkcicdStack', {
   env: {account: '879349532564', region: 'ap-south-1'},
 });
+
+app.synth();
