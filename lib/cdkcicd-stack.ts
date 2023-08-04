@@ -8,7 +8,10 @@ export class CdkcicdStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+    //const oauth = cdk.SecretValue.secretsManager('github-token');
+
     const pipelinedemo = new CodePipeline(this, 'pipelinelogicalid', {
+      
        synth: new ShellStep('Synth', {
         // Use a connection created using the AWS console to authenticate to GitHub
         // Other sources are available.
